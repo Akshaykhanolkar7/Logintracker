@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Title of document is here
+    </title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js">
+    </script>
+    <script src="//cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js">
+    </script>
+</head>
+
+<body>
+    <table id="tableData">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>1001</td>
+            <td>john</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>1002</td>
+            <td>robert</td>
+            <td>25</td>
+        </tr>
+        <tr>
+            <td>1003</td>
+            <td>romio</td>
+            <td>50</td>
+        </tr>
+    </table>
+    <button class="Btn" onclick='tableToExcel("tableData", "tableData")'>Click to Export</button>
+    <script>
+    
+        $(document).ready(function () {
+            $(".Btn").table2excel({
+                filename: "Students.xls"
+            });
+        });
+    </script>
+</body>
+
+</html>
